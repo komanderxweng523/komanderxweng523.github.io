@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Reflection - Komander X Weng</title>
+		<link rel="stylesheet" href="css/styles1.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+		<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+	</head>
+
+<body>
+	<nav class="menu">
+            <div class="menu__logo">
+                <a href="index.html">Komander</a>
+            </div>
+        </nav>
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">(01)</div>
+				<div class="acc-title">Library Skill</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Perpustakaan Tun Abdul Rahman Ya’kub (PeTARY), the Library of Universiti Malaysia Sarawak (UNIMAS) was established in 1993. The Library was officiated on 17 January 1995 by Datuk Seri Anwar Ibrahim who was the Deputy Prime Minister of Malaysia at that time, with the name Centre for Academic Information Services (CAIS). However after 26 years being known as CAIS, the Library is now gazetted as Perpustakaan Tun Abdul Rahman Ya’kub (PeTARY), named after the late Tun Abdul Rahman Ya'kub, who was the third Chief Minister of Sarawak and also the fourth Head of the State of Sarawak.
+			</li>
+			<li>The Library offers a variety of services and facilities such as a big exhibition area, an auditorium, seminar rooms, discussion rooms, computer laboratories, carrel rooms, media room, and a 24-hour learning facility. A variety of communication channels are maintained for enquiries, including Consultancy Desk, via telephone and email, as well as WhatsApp and Social Media.</li>
+			<li>In this lesson, we are taught to learn on how to search a book in <a href="http://www.library.unimas.my/">this website</a>.I was proud of our university have plenty of books and learning materials to learn new knowledge.</li>
+		</ul>
+
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">(02)</div>
+				<div class="acc-title">Academic Writing Skill</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Academic writing is clear, concise, focussed, structured and backed up by evidence. Its purpose is to aid the reader’s understanding.It has a formal tone and style, but it is not complex and does not require the use of long sentences and complicated vocabulary.Each subject discipline will have certain writing conventions, vocabulary and types of discourse that you will become familiar with over the course of your degree. However, there are some general characteristics of academic writing that are relevant across all disciplines.
+			</li>
+			<li>To know more about academic writing skills, our lecturer gave an word file example and modity it. By completing this, I have learnt on how to use shortcut key to do my writing effectively.</li>
+			<li>This is a very useful skill to help me when doing assignment and project.</li>
+		</ul>
+
+		<div class="acc-toggle" data-collapse="">
+			<div class="acc-block">
+				<div class="acc-no">(03)</div>
+				<div class="acc-title">Meeting with Academic Advisor</div>
+				<div class="acc-toggle-icon">
+					<ion-icon name="add-outline"></ion-icon>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li>
+				In the date of 28th October 2020, my academic advisor who is Profesor Madya Dr. Halikul bin Lenando has conducted a group meeting with other mentees at 2.00pm. Due to the current pandemic, we cannot have our meeting face to face, so the only way for us to meet each other virtually is through Cisco Webex Meeting. 
+			</li>
+			<li>In our first meeting, we did talk about some stuff such as study, emotion and also the problems I faced currently. For me, I faced the problem on don't know how to getting closer friend relationship with university students due to COVID-19 pandemic. He told me that I should have to changing mindset that not to be passive, but to actively know people. Don't be shy to knowing new friends. </li>
+			<li>In short, I am appreciate to Profesor Madya Dr. Halikul bin Lenando that gave me some advices. Hope that I will being excellent in my uni life.</li>
+		</ul>
+		<script>
+			let parent = document.querySelectorAll("[data-collapse");
+			parent.forEach((element) => {
+				let clickTarget = element.querySelector("*");
+				let collapseElement = element.nextElementSibling;
+				let collapseElementChildren = collapseElement.children;
+				let tl = new TimelineMax({
+					reversed: true,
+					paused: true,
+				});
+
+				tl.from(
+					collapseElement,
+					1.6,
+					{
+						className: "+=heightZero",
+						ease: Expo.easeInOut,
+					},
+					"open"
+				);
+				tl.staggerFrom(
+					collapseElementChildren,
+					1,
+					{
+						autoAlpha: 0,
+						y: "40%",
+						ease: Expo.easeInOut,
+					},
+					0.08,
+					"open+=.1"
+				);
+
+				clickTarget.addEventListener("click", () => {
+					tl.reversed() ? tl.play() : tl.reverse();
+				});
+			});
+		</script>
+	</body>	
+</html>
